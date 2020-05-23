@@ -247,7 +247,8 @@ class Statinfo:
         draw.multiline_text((57-1+xx, num_h+yy), str(self.recover), fill=(255, 255, 255), font=fontnum)
         draw.rectangle((67, 1+yy, 80, 16+yy), fill=(63, 72, 204), outline=(112, 146, 190))
         draw.multiline_text((70-1+xx, num_h+yy), str(self.repair), fill=(255, 255, 255), font=fontnum)
-        draw.multiline_text((82, 1+yy), self.User.display_name, fill=(255, 255, 255), font=fontjp)
+        User = client.get_user(self.Userid)
+        draw.multiline_text((82, 1+yy), User.display_name, fill=(255, 255, 255), font=fontjp)
 
         #fill=(63, 72, 204)
         #fill=(139, 0, 139)
