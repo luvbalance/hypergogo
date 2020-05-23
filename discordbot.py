@@ -19,11 +19,9 @@ def connect():
     #return redis.from_url(url="redis://localhost", decode_responses=True)
     return redis.from_url(url=os.environ.get('REDIS_URL'), decode_responses=True)
 
-#実行する環境の環境変数に'DISCORD_BOT_TOKEN'を登録しておけば、
+#実行する環境の環境変数に'DISCORD_BOT_TOKEN_HYPERGOGO'を登録しておけば、
 #ローカルPC実行、Heloku実行どちらでも対応可能です。
-#GitHubにアップするときは、botトークンはソースに残してはいけない(コメントアウトでもだめ)
-token = 'NzA4NTQ3MzQ4MDk1MTcyNzM5.XrY8Ug.faA4NN7NFHHtwhqbn58M0_Rvu70'
-#token = os.environ['DISCORD_BOT_TOKEN']
+token = os.environ['DISCORD_BOT_TOKEN_HYPERGOGO']
 
 #完了メッセージ定義
 compmes =['{0}機修理できました'
